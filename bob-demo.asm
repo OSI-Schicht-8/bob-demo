@@ -170,7 +170,7 @@ mainloop		move.l		#_custom,a6
 			bsr		resetbackground		; copy background bitmap to invisible bitmap
 			bra		mainloop
 
-mainexit		move.l			#_custom,a6
+mainexit		move.l		#_custom,a6
 			or.w		#$8000,intena_old	; set bit 15
 			move.w		#$7fff,INTENA(a6)	; disable all interrupts
 			move.w		intena_old,INTENA(a6)	; reenable old interrupts
